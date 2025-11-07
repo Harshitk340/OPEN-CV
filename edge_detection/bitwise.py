@@ -1,0 +1,16 @@
+import cv2
+import numpy as np
+img1=np.zeros((300, 300), dtype="uint8")
+img2=np.zeros((300, 300), dtype="uint8")
+cv2.circle(img1, (150, 150), 100, 255, -1)
+cv2.rectangle(img2, (100,100), (300,300), 255, -1)
+And=cv2.bitwise_and(img1, img2)
+Or=cv2.bitwise_or(img1, img2)
+Not=cv2.bitwise_not(img1)
+cv2.imshow("circle", img1)
+cv2.imshow("rectengle", img2)
+cv2.imshow("and opertor", And)
+cv2.imshow("or operator", Or)
+cv2.imshow("not operator", Not)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
